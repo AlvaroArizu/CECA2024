@@ -1,0 +1,968 @@
+/* Estilos generales */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
+/*NAVBAR*/
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+}
+
+.logo-icon-small {
+    width: 60px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+
+
+/* Main Navigation Bar */
+.main-nav {
+    background-color: #425f7bc3;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Navbar Toggler for Mobile */
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.toggler-icon {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+}
+
+.toggler-icon::after,
+.toggler-icon::before {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.toggler-icon::before {
+    top: -8px;
+}
+
+.toggler-icon::after {
+    bottom: -8px;
+}
+
+/* Navbar Menu */
+.navbar-collapse {
+    display: flex;
+}
+
+.navbar-collapse.active {
+    display: flex;
+}
+
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #f8c512; /* Highlight color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 948px) {
+    /* Botón de hamburguesa */
+    .navbar-toggler {
+        display: block;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    /* Menú desplegable */
+    .navbar-collapse {
+        flex-direction: column; /* Cambia la dirección a vertical */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background-color: #2c3e5093;
+        display: none;
+        padding: 8px; /* Agrega padding de 8px */
+        transition: all 0.5s ease; 
+    }
+
+    /* Mostrar menú desplegable cuando está activo */
+    .navbar-collapse.active {
+        display: flex;
+    }
+
+    /* Estilos de los elementos del menú */
+    .navbar-collapse.active .navbar-nav {
+        flex-direction: column; /* Cambia la dirección a vertical */
+        align-items: left; /* Alinea las opciones a la izquierda */
+    }
+
+    .navbar-collapse.active .nav-item {
+        margin: 5px 0; /* Reducir el espacio entre las opciones */
+    }
+
+    .navbar-collapse.active .nav-item a {
+        display: block;
+        padding: 8px; /* Ajusta el padding según sea necesario */
+        color: #ffffff;
+        text-decoration: none;
+        transition: background-color 0.3s; /* Agrega una transición sutil */
+    }
+
+    /* Cambia el color de fondo del enlace al pasar el cursor */
+    .navbar-collapse.active .nav-item a:hover {
+        color: #f8c512; /* Highlight color on hover */
+    }
+}
+
+
+
+/* Hero Block Styles */
+.hero-block {
+    background-image: url('./Pic/hero-2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0 100px; /* Ajusta el padding superior a 150px */
+}
+
+
+.container-hero h1 {
+    color: rgb(233, 233, 233);
+    font-size: 70px; /* Aumenta el tamaño de la fuente */
+    font-weight: 800px;
+    margin-left: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega sombra al texto */
+}
+
+/* Estilos para el título */
+.hero-heading {
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    font-size: 55px; /* Tamaño de fuente más grande */
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-left: 40px; /* Agrega margen izquierdo */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Agrega sombra al texto */
+}
+
+/* Estilos para alinear contenido a la izquierda */
+.hero-text-block {
+    text-align: left;
+}
+
+.site-logo {
+    margin-left: 30px;
+}
+.logo-icon{
+    margin-left: 20px;
+    width: 400px;
+    height: 500px;
+}
+
+.text1 {
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 24px; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Agrega negrita */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.text2 {
+    text-align: justify;
+    color: rgb(233, 233, 233);
+    margin-left: 40px;
+    font-size: 18px; /* Aumenta el tamaño del texto */
+}
+
+
+.header-text {
+    margin-left: 20px; /* Ajusta el margen izquierdo del texto */
+}
+
+.header-text p {
+    margin-bottom: 10px; /* Ajusta el margen inferior del párrafo */
+}
+
+.logoCECA {
+    width: 95px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+.logoUM {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+/* Stats Block Styles */
+.stats-block .item {
+    margin-bottom: 20px;
+}
+
+.stats-block .number {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.stats-block .unit {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* About Section Styles */
+.section-heading {
+    padding: 20px;
+    font-size: 3rem; /* Tamaño de fuente más grande para el título */
+    color: #000000; /* Color de texto blanco */
+    text-align: center; /* Centrado horizontal para el título */
+}
+
+.section-intro {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.benefits-list {
+    margin-bottom: 30px;
+}
+
+.benefits-list h4 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.benefits-list ul li {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Media Block Styles */
+.media-block {
+    padding: 100px 0;
+}
+
+.media-block .card {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.media-block .card-title {
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.media-block .meta {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Schedule Section Styles */
+.schedule-tab-content {
+    margin-top: 50px;
+}
+
+.schedule-tab-content .item {
+    margin-bottom: 30px;
+}
+
+.schedule-tab-content .title {
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.schedule-tab-content .desc {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/*ESTILOS SECCION ABOUT*/
+.container-session1 {
+    text-align: center; /* Centra el contenido horizontalmente */
+    background-color: #fffbe7; /* Fondo claro con tono amarillo */
+    padding: 50px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.container-session1 h3{
+    font-size: 3rem; /* Tamaño de fuente más grande para el título */
+    color: #4CAF50;  
+    text-align: center; /* Centrado horizontal para el título */
+}
+
+.sobre-intro {
+    text-align: justify;
+    padding-right: 55px;
+    padding-left: 55px;
+    color: #333; /* Texto oscuro para mejor lectura */
+}
+.benefits-list {
+    margin-top: 30px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+.benefits-list h4 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-align: center; /* Centra el título */
+}
+
+.benefits-list ul {
+    list-style: none;
+    padding-left: 0;
+    display: inline-block; /* Hace que la lista sea horizontal */
+    text-align: left; /* Alinea el texto a la izquierda dentro de la lista */
+    margin-bottom: 20px; /* Añade espacio inferior a la lista */
+}
+.benefits-list .item li i {
+    color: green; /* Cambia el color de los íconos a verde */
+}
+
+.benefits-list li {
+    margin-right: 15px;
+    color: #FF9800; /* Texto en color naranja */
+}
+
+/* Estilos para el contador */
+.event-countdown {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.event-countdown h4 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 7px;
+    margin-top: 12px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-item {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.countdown-label {
+    font-size: 12px;
+    color: #000000;
+    text-transform: uppercase;
+}
+.countdown-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #FF9800; /* Fondo azul con opacidad */
+    padding: 10px 20px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 30PX;
+}
+
+
+/* Estilos para "Session2- Ediciones anteriores*/
+.container-session2 {
+    background-color: #f7fff7; /* Fondo celeste */
+    padding: 50px 15px;
+    margin-bottom: 30px; /* Espacio inferior */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.container-session2 h4 {
+    font-size: 2.5rem; /* Tamaño de fuente más grande para el título */
+    color: #278bbd;  
+    text-align: center; /* Centrado horizontal para el título */
+    margin-bottom: 30px; /* Espacio inferior */
+}
+
+.container-session2 .section-intro {
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centrado horizontal para el texto */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    margin-bottom: 30px; /* Espacio inferior */
+}
+
+#about-section .fas {
+    color: #c89809; /* Color naranja */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+.container-session2 .row {
+    display: flex; /* Flexbox para alinear los cuadros horizontalmente */
+    flex-wrap: wrap; /* Envolver los cuadros cuando no haya suficiente espacio */
+    justify-content: space-between; /* Espacio entre los cuadros */
+}
+
+.container-session2 .col-6 {
+    flex: 0 0 calc(50% - 15px); /* Ancho del 50% para cada columna en pantallas medianas */
+    max-width: calc(50% - 15px); /* Ancho máximo con espacio entre cuadros */
+    margin-bottom: 30px; /* Espacio inferior entre columnas */
+}
+
+.container-session2 .col-lg-3 {
+    flex: 0 0 calc(25% - 15px); /* Ancho del 25% para cada columna en pantallas grandes */
+    max-width: calc(25% - 15px); /* Ancho máximo con espacio entre cuadros */
+}
+
+.container-session2 .card {
+    background-color: #fff; /* Fondo blanco para los cuadros */
+    border-radius: 10px; /* Bordes redondeados */
+    border: none; /* Sin bordes */
+    text-align: left; /* Alineado a la izquierda para el contenido */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.container-session2 .card-title {
+    font-size: 1.25rem; /* Tamaño de fuente para el título */
+    margin-bottom: 10px; /* Espacio inferior para el título */
+    color: #4CAF50;
+}
+
+.container-session2 .card-text, .container-session2 .meta {
+    font-size: 1rem; /* Tamaño de fuente para el texto */
+    color: #000; /* Color del texto negro */
+}
+
+@media screen and (max-width: 991px) {
+    .container-session2 .col-lg-3 {
+        flex: 0 0 calc(50% - 15px); /* Ancho del 50% para cada columna en pantallas medianas */
+        max-width: calc(50% - 15px); /* Ancho máximo con espacio entre cuadros */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container-session2 .col-lg-3 {
+        flex: 0 0 100%; /* Ancho del 100% para cada columna en pantallas pequeñas */
+        max-width: 100%; /* Ancho máximo para que ocupe toda la pantalla */
+    }
+}
+
+/*ESTILOS PARA LA SECCION AUTORIDADES*/
+.container-session8 {
+    padding: 50px 15px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.container-session8 h1 {
+    font-size: 2.5rem;
+    color: #278bbd; /* Color azul */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#autoridad-section .fas {
+    color: #c89809; /* Color naranja */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+#autoridad-section .fa-solid {
+    color: #FF9800; /* Borde en naranja */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+.container-session8 .content-info {
+    border-color: #FF9800; /* Borde en naranja */
+}
+.container-session8 h5 {
+    font-size: 1.2rem;
+    color:#4CAF50; /* Cabecera en verde */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content-info {
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    overflow: hidden; 
+    transition: max-height 0.5s ease-in-out; 
+}
+
+.hidden {
+    display: none;
+}
+
+.rotate {
+    transition: transform 0.3s ease;
+    transform: rotate(180deg);
+}
+
+/*ESTILOS SECCION DESTINATRIOS Y EJES*/
+/* Estilos para la sección Destinatarios */
+#destinatarios-section {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff8e1;
+    color: #333; /* Color de texto oscuro */
+    padding: 50px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+#destinatarios-section h1 {
+    color: #278bbd; 
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#destinatarios-section .fas {
+    color: #c89809; /* Color naranja */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+#destinatarios-section ul {
+    padding-left: 20px;
+}
+
+#destinatarios-section li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección Ejes */
+#eje-section {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7fff7;
+    color: #333; /* Color de texto oscuro */
+    padding: 50px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+#eje-section h1 {
+    color: #278bbd;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#eje-section ul {
+    padding-left: 20px;
+}
+
+#eje-section li {
+    margin-bottom: 10px;
+}
+
+#eje-section .fas {
+    color: #c89809; /* Color naranja */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+
+/* Estilos para la sección de inscripción */
+#inscripcion-section {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff8e1;
+    color: #333; /* Color de texto oscuro */
+    padding: 50px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+#inscripcion-section h2 {
+    color: #278bbd; /* Color azul */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+#inscripcion-section h4 {
+    color: #278bbd; /* Color azul */
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#inscripcion-section .desc {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#inscripcion-section .contact-info {
+    font-style: italic;
+}
+
+#inscripcion-section .contact-info a {
+    color: #007bff; /* Color azul */
+    text-decoration: none;
+}
+
+#inscripcion-section .contact-info a:hover {
+    text-decoration: underline;
+}
+
+#inscripcion-section .fas, #inscripcion-section .fab {
+    color: #c89809; /* Color naranja */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+
+/* Estilos específicos para la tabla */
+#inscripcion-section table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff; /* Mantener el fondo blanco para resaltar mejor los colores */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#inscripcion-section th, #inscripcion-section td {
+    border: 1px solid #FFC107; /* Borde naranja */
+    text-align: left;
+    padding: 12px;
+    color: #212529; /* Color de texto oscuro para contraste */
+}
+
+#inscripcion-section th {
+    background-color: #4CAF50; /* Cabecera en verde */
+    color: #ffffff; /* Texto blanco para contraste */
+}
+
+#inscripcion-section tr:nth-child(even) {
+    background-color: #ffffe0; /* Filas alternas en amarillo */
+}
+
+#inscripcion-section tr:hover {
+    background-color: #ffa41be0; /* Color naranja al pasar el mouse */
+    color: #ffffff; /* Cambio de color de texto a blanco para mejor visibilidad */
+}
+
+#inscripcion-section table ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Mejorar la responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    #inscripcion-section {
+        padding: 10px;
+    }
+
+    #inscripcion-section .container-session3 {
+        padding: 10px;
+    }
+
+    #inscripcion-section h2 {
+        font-size: 20px;
+    }
+
+    #inscripcion-section h4 {
+        font-size: 18px;
+    }
+}
+
+
+/*ESTILOS PARA LA SECCION TRABAJOS*/
+.container-session5 {
+    padding: 50px 15px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.container-session5 h1 {
+    font-size: 2.5rem;
+    color: #278bbd; /* Color azul */
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container-session5 h3 {
+    font-size: 1.5rem;
+    color: #c89809; /* Color azul */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#informacion-section .fas {
+    color: #c89809; /* Color naranja */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+#informacion-section .fa-solid {
+    color: #FF9800; /* Borde en naranja */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+.container-session5 .content-info {
+    border-color: #FF9800; /* Borde en naranja */
+}
+.container-session5 h5 {
+    font-size: 1.2rem;
+    color:#4CAF50; /* Cabecera en verde */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content-info {
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    overflow: hidden; 
+    transition: max-height 0.5s ease-in-out; 
+}
+
+.hidden {
+    display: none;
+}
+
+.rotate {
+    transition: transform 0.3s ease;
+    transform: rotate(180deg);
+}
+
+
+/* Estilos para el contenido dentro de la clase .desc */
+.desc {
+    font-size: 1.1rem; /* Tamaño de fuente */
+    line-height: 1.6; /* Altura de línea */
+    color: #333; /* Color de texto oscuro */
+    background-color: #f9f9f9; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.desc p {
+    margin-bottom: 15px; /* Espacio inferior entre párrafos */
+}
+
+.desc ul {
+    padding-left: 20px; /* Sangría izquierda para listas */
+}
+
+.desc ul li {
+    margin-bottom: 10px; /* Espacio inferior entre elementos de lista */
+}
+
+.title {
+    font-size: 1.3rem; /* Tamaño de fuente para subtítulos */
+    color: #278bbd; /* Color azul */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.btn-red {
+    background-color: #e74c3c; /* Cambié el color del botón a un rojo más intenso */
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px 25px; /* Aumenté el tamaño del botón */
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.btn-red:hover {
+    background-color: #c0392b; /* Cambié el tono del rojo al pasar el mouse */
+}
+
+
+
+
+/*ESTILOS SECCION UBICACION*/
+.container-session7 {
+    background-color: #fff8e1;
+    padding: 50px 15px; /* Espaciado interno con valores de los costados reducidos */
+    margin-bottom: 0; /* Elimina el margen inferior */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.container-session7 h3 {
+    font-size: 2.5rem; /* Tamaño de fuente más grande para el título */
+    color:  #278bbd; /* Color azul */
+    text-align: center; /* Centrado horizontal para el título */
+    margin-bottom: 5px; /* Espacio inferior */
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    width: 60%; /* Establece el ancho del contenedor del mapa */
+    margin: 0 auto; /* Centra horizontalmente el contenedor del mapa */
+    padding-bottom: 40%; /* Proporción 16:9 para el contenedor */
+    height: 0;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+}
+
+
+.container-session7 h4 {
+    font-size: 1.5rem; /* Tamaño de fuente más grande para el título */
+    color: #000000; /* Color de texto blanco */
+    text-align: center; /* Centrado horizontal para el título */
+    margin-bottom: 2px;
+}
+.container-session7 p {
+    color: #000000; /* Texto blanco */
+    font-size: 1.0rem; /* Tamaño de fuente */
+    text-align: justify;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+#ubicacion-section .fa-solid {
+    color: #c89809; /* Color naranja */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+
+
+
+/*ESTILOS FOOTER*/
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.footer .footer-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer .social-list {
+    list-style: none;
+    margin: 0 auto; /* Centra la lista horizontalmente */
+    max-width: 400px; /* Define un ancho máximo para la lista */
+    text-align: center; /* Centra el contenido de la lista */
+}
+
+.footer .social-list li {
+    margin-bottom: 20px; /* Aumenta el espacio entre los íconos */
+    display: inline-block; /* Hace que los íconos sean elementos en línea */
+}
+
+.footer .social-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px; /* Ajusta el tamaño de los íconos */
+    margin: 0 15px; /* Agrega un espacio horizontal entre los íconos */
+}
+
+.footer .social-list li a:hover {
+    text-decoration: none; /* Elimina el subrayado al pasar el mouse */
+}
+
+.footer small {
+    display: block; 
+    text-align: center;
+    font-size: 16px; 
+    font-weight: bold; 
+    margin-top: 5px;
+    color: #ccc; 
+}
